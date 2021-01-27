@@ -35,11 +35,16 @@ const Products = () => {
   ];
 
   const { url } = useRouteMatch();
-
+  console.log(useRouteMatch())
   /* Create an array of `<li>` items for each product */
+  // Nhận danh sách products
+  // duyệt qua từng product
+  // Tạo thẻ Link
+  // Link này có path là url, rồi biến chạy là product.id (id tăng dần 1, 2, 3, 4)
   const linkList = productData.map((product) => {
     return (
       <li key={product.id}>
+        {/* Step 2 - link */}
         <Link to={`${url}/${product.id}`}>{product.name}</Link>
       </li>
     );
@@ -63,7 +68,10 @@ const Products = () => {
           </ul>
         </div>
       </div>
-
+      {/* Step 1 tạo */}
+      <Route path={`${url}/:productId`}>
+          <Product data={productData}/>
+      </Route>
     
     </div>
   );

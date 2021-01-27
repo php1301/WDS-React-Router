@@ -2,7 +2,10 @@ import React, { useState } from "react";
 import { Redirect, useLocation } from "react-router-dom";
 
 export default function Login() {
+  // Mục đích là form login
+  // Và thay đổi trạng thái login
   const { state } = useLocation();
+  console.log(state)
   const { from } = state || { from: { pathname: "/" } };
   const [redirectToReferrer, setRedirectToReferrer] = useState(false);
 
