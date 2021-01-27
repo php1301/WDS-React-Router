@@ -64,12 +64,7 @@ const Products = () => {
         </div>
       </div>
 
-      <Route path={`${url}/:productId`}>
-        <Product data={productData} />
-      </Route>
-      <Route exact path={url}>
-        <p style={{ textAlign: "center" }}>Please select a product.</p>
-      </Route>
+    
     </div>
   );
 };

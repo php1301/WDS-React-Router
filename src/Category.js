@@ -16,20 +16,7 @@ const Category = () => {
 
   return (
     <div>
-      <ul>
-        <li>
-          <Link to={`${url}/shoes`}>Shoes</Link>
-        </li>
-        <li>
-          <Link to={`${url}/boots`}>Boots</Link>
-        </li>
-        <li>
-          <Link to={`${url}/footwear`}>Footwear</Link>
-        </li>
-      </ul>
-      <Route path={`${path}/:name`}>
-        <Item />
-      </Route>
+     {/* Category */}
     </div>
   );
 };
